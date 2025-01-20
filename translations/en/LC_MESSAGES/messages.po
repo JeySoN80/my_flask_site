@@ -1,0 +1,11 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Добро пожаловать на сервер DayZ!"
+msgstr "Welcome to DayZ Server!"
+
+msgid "Версия сайта 1.01"
+msgstr "Site Version 1.01"
+

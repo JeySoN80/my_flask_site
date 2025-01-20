@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ get_locale() }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayZSERVER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/dayz-server">DayZ Server</a>
+        <!-- Кнопки для смены языка -->
+        <a href="/set_language/ru">RU</a>
+        <a href="/set_language/en">EN</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>
+                {% trans %}Welcome to DayZ Server!{% endtrans %}
+            </h1>
+            <p>
+                {% trans %}Site Version 1.01{% endtrans %}
+            </p>
+        </div>
+    </div>
+</body>
+</html>

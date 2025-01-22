@@ -1,27 +1,37 @@
-<!DOCTYPE html> <!-- Определяет тип документа как HTML5, указывая браузеру, что это HTML5-страница, для корректного отображения. -->
-<html lang="{{ get_locale() }}"> <!-- Открывает тег <html> и указывает, что язык контента страницы — английский (en), чтобы поисковые системы и браузеры знали, что это за язык. -->
-<head> <!-- Открывает тег <head>, который содержит мета-данные страницы, не отображаемые непосредственно на странице. -->
-    <meta charset="UTF-8"> <!-- Устанавливает кодировку страницы как UTF-8, обеспечивая поддержку всех символов, включая кириллицу. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Устанавливает настройки для адаптивного дизайна, чтобы страница корректно отображалась на мобильных устройствах. -->
-    <title>About Us</title> <!-- Устанавливает название страницы, которое будет отображаться на вкладке браузера. В данном случае это "About Us" (О нас). -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Ссылается на внешний файл стилей (style.css), который будет применяться к странице. В Flask используется {{ url_for('static', filename='style.css') }} для указания пути к статическим файлам. -->
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"> <!-- Устанавливает иконку сайта (favicon.ico), которая отображается на вкладке браузера. -->
+<!DOCTYPE html>
+<html lang="{{ get_locale() }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
-<body> <!-- Открывает тело страницы, где размещаются все видимые элементы на веб-странице. -->
-    <div class="navbar"> <!-- Открывает контейнер для навигационной панели с ссылками на страницы сайта. -->
-        <a href="/">{% trans %}Home{% endtrans %}</a> <!-- Ссылка на главную страницу. Пользователи могут вернуться на главную, кликнув по этой ссылке. -->
-        <a href="/about">{% trans %}About Us{% endtrans %}</a> <!-- Ссылка на текущую страницу "О нас", она выделена для перехода на саму страницу. -->
-        <a href="/dayz-server">{% trans %}DayZ Server{% endtrans %}</a> <!-- Ссылка на страницу, посвященную серверу игры DayZ. -->
-        <!-- Кнопки для смены языка -->
-        <a href="{{ url_for('set_language', lang='ru') }}">RU</a>
-        <a href="{{ url_for('set_language', lang='en') }}">EN</a>
+<body>
     </div>
-    <h1>{% trans %}О сайте.{% endtrans %}</h1> <!-- Заголовок первого уровня, который информирует о содержимом страницы (О нашем сайте). -->
+    <div class="navbar">
+        <a href="/">{% trans %}Home{% endtrans %}</a>
+        <a href="/about">{% trans %}About Us{% endtrans %}</a>
+        <a href="/dayz-server">{% trans %}DayZ Server{% endtrans %}</a>
+        <!-- Кнопки для смены языка -->
+        <div class="dropdown">
+    <button class="dropbtn">Language</button>
+    <div class="dropdown-content">
+        <a href="{{ url_for('set_language', lang='en') }}">English</a>
+        <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+    </div>
+</div>
+    </div>
+    <div class="container">
+        <div class="content">
+    <h1>{% trans %}О сайте.{% endtrans %}</h1>
+            </div>
+    </div>
     <div class="manifest">
         <p>
         {% trans %}This website is the result of my first steps into programming. The project was created with the help of my virtual mentor, who guides me, shares valuable knowledge, and teaches me through hands-on practice. This makes the process more challenging but also much more engaging and exciting. Thank you for visiting!{% endtrans %}
         </p>
     </div>
-    <a href="/">{% trans %}Back to Home{% endtrans %}</a> <!-- Ссылка для возврата на главную страницу, позволяет пользователю вернуться на главную, кликнув по ссылке. -->
+    <a href="/">{% trans %}Back to Home{% endtrans %}</a>
 </body>
-</html> <!-- Закрывает HTML-документ, завершает структуру страницы. -->
+</html>

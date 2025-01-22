@@ -8,12 +8,18 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/dayz-server">DayZ Server</a>
+            <a href="/">
+                {% trans %}Home{% endtrans %}
+            </a>
+            <a href="/about">
+                {% trans %}About Us{% endtrans%}
+            </a>
+            <a href="/dayz-server">
+                {% trans %}DayZ Server{% endtrans %}
+            </a>
         <!-- Кнопки для смены языка -->
-        <a href="/set_language/ru">RU</a>
-        <a href="/set_language/en">EN</a>
+        <a href="{{ url_for('set_language', lang='ru') }}">RU</a>
+        <a href="{{ url_for('set_language', lang='en') }}">EN</a>
     </div>
     <div class="container">
         <div class="content">
@@ -21,7 +27,7 @@
                 {% trans %}Welcome to DayZ Server!{% endtrans %}
             </h1>
             <p>
-                {% trans %}Site Version 1.01{% endtrans %}
+                {% trans %}Site Version{% endtrans %} 1.02
             </p>
         </div>
     </div>

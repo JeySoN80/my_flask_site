@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for
 from flask_babel import Babel
 
 app = Flask(__name__)
@@ -9,10 +9,9 @@ babel = Babel()
 
 # Функция для выбора языка
 def get_locale():
-    return session.get('language', 'ru')  # Возьмем язык из сессии (или используем 'ru' по умолчанию)
+    return session.get('lang', 'en')  # Возьмем язык из сессии (или используем 'en' по умолчанию)
 
-# Инициализация Flask-Babel с использованием функции get_locale для выбора языка
-babel.init_app(app, locale_selector=get_locale)
+babel.init_app(app, locale_selector=get_locale)  # Подключаем Babel к приложению с функцией выбора языка
 
 @app.route("/")
 def home():
@@ -26,11 +25,11 @@ def about():
 def dayz_server():
     return render_template("dayz_server.html", get_locale=get_locale)  # Страница сервера DayZ
 
-@app.route("/set_language/<lang>")
+@app.route('/set_language/<lang>')
 def set_language(lang):
-    if lang in ['ru', 'en']:
-        session['language'] = lang  # Сохраняем выбранный язык в сессии
-    return redirect(url_for('home'))  # Перенаправляем на главную страницу
+    session['lang'] = lang
+    next_url = request.referrer or url_for('home')  # Возвращаем пользователя на предыдущую страницу или на главную
+    return redirect(next_url)
 
 if __name__ == "__main__":
     app.run(debug=True)  # Запуск приложения

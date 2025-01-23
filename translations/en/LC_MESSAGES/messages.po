@@ -27,8 +27,8 @@ msgstr "Back to Home"
 msgid "Этот сайт — результат моих первых шагов в программировании. Проект создан с помощью моего виртуального наставника, который направляет меня, делится ценными знаниями и обучает на практике. Это делает процесс сложнее, но ещё интереснее и увлекательнее. Спасибо, что заглянули!"
 msgstr "This website is the result of my first steps into programming. The project was created with the help of my virtual mentor, who guides me, shares valuable knowledge, and teaches me through hands-on practice. This makes the process more challenging but also much more engaging and exciting. Thank you for visiting!"
 
-msgid "Добро пожаловать на наш DayZ Сервер!"
-msgstr "Welcome to Our DayZ Server!"
+msgid "О сервере"
+msgstr "About server"
 
 msgid "Загляните на наш сервер и присоединяйтесь к веселью!"
 msgstr "Check out our server and join the fun!"

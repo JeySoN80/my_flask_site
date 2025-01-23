@@ -8,38 +8,49 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <!-- Навигационная панель -->
-    <div class="navbar">
-        <a href="/">
-            {% trans %}Home{% endtrans %}
-        </a>
-        <a href="/about">
-            {% trans %}About Us{% endtrans %}
-        </a>
-        <a href="/dayz-server">
-            {% trans %}About srever{% endtrans %}
-        </a>
+    <!-- Контейнер для навигационной панели -->
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="/">
+                {% trans %}Home{% endtrans %}
+            </a>
+            <a href="/about">
+                {% trans %}About site{% endtrans %}
+            </a>
+            <a href="/dayz-server">
+                {% trans %}About server{% endtrans %}
+            </a>
 
-        <!-- Кнопки для смены языка -->
-        <div class="dropdown">
-            <button class="dropbtn">EN/RU</button>
-            <div class="dropdown-content">
-                <a href="{{ url_for('set_language', lang='en') }}">English</a>
-                <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+            <!-- Кнопки для смены языка -->
+            <div class="dropdown">
+                <button class="dropbtn">{% trans %}EN{% endtrans %}</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('set_language', lang='en') }}">English</a>
+                    <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Контейнер с содержимым -->
-    <div class="container">
-        <div class="content">
-            <h1>
-                {% trans %}Welcome to DayZ Server!{% endtrans %}
-            </h1>
-            <p>
-                {% trans %}Site Version{% endtrans %} 1.03
-            </p>
+    <!-- Основной контейнер для контента -->
+    <div class="main-container">
+        <div class="container">
+            <div class="content">
+                <h1>
+                    {% trans %}Welcome to DayZ Server!{% endtrans %}
+                </h1>
+                <p>
+                    {% trans %}Site Version{% endtrans %} 1.05
+                </p>
+            </div>
         </div>
+    </div>
+
+    <!-- Контейнер для футера (если нужно будет добавить) -->
+    <div class="footer-container">
+        <footer>
+            <p>&copy; 2025 DayZ Server. All Rights Reserved.</p>
+        </footer>
     </div>
 </body>
 </html>

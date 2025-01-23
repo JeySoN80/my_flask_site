@@ -18,8 +18,8 @@ msgstr "О нас"
 msgid "DayZ Server"
 msgstr "DayZ Сервер"
 
-msgid "About site."
-msgstr "О сайте."
+msgid "About site"
+msgstr "О сайте"
 
 msgid "Back to Home"
 msgstr "На Главную"
@@ -38,3 +38,6 @@ msgstr "Загляните на наш сервер и присоединяйт�
 
 msgid "Server Info:"
 msgstr "Информация о сервере:"
+
+msgid "EN"
+msgstr "RU"

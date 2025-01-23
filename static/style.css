@@ -1,126 +1,170 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    background-image: url('/static/back.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #a1adad;
-    text-align: center;
-    box-sizing: border-box;
+    height: 80%; /* Задает высоту элементов html и body на 100% от высоты окна браузера */
+    margin: 0; /* Убирает внешние отступы у html и body */
+    padding: 0; /* Убирает внутренние отступы у html и body */
+    font-family: Arial, sans-serif; /* Устанавливает шрифт Arial или ближайший доступный sans-serif */
+    background-color: #f4f4f4; /* Устанавливает фоновый цвет */
+    background-image: url('/static/back.jpg'); /* Устанавливает фоновое изображение */
+    background-size: cover; /* Растягивает фон на весь экран, сохраняя пропорции */
+    background-position: center; /* Центрирует фоновое изображение */
+    background-repeat: no-repeat; /* Запрещает повторение фонового изображения */
+    background-attachment: fixed; /* Фиксирует фон при прокрутке страницы */
+    color: #a1adad; /* Устанавливает цвет текста */
+    text-align: center; /* Центрирует текст по горизонтали */
+    box-sizing: border-box; /* Включает границы и отступы в общую ширину и высоту */
+}
+
+.navbar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 .navbar {
-    background-color: #333;
-    padding: 10px 20px; /* Внутренний отступ сверху/снизу и по бокам */
-    display: flex;
-    align-items: center; /* Центрирование элементов по вертикали */
-    justify-content: space-between; /* Разделяет меню и кнопку */
-}
-
-.navbar {
-    background-color: #333;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Центрирование основного меню */
-    position: relative; /* Для позиционирования кнопки языка */
+    background-color: #333; /* Устанавливает темный фон для панели навигации */
+    padding: 10px 20px; /* Внутренние отступы сверху/снизу и по бокам */
+    display: flex; /* Использует флексбокс для выравнивания элементов */
+    align-items: center; /* Центрирует элементы по вертикали */
+    justify-content: center; /* Центрирует элементы по горизонтали */
+    position: relative; /* Задает относительное позиционирование для последующего абсолютного позиционирования дочерних элементов */
 }
 
 .navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    margin: 0 15px; /* Расстояние между пунктами меню */
-    transition: color 0.3s;
+    color: white; /* Устанавливает цвет текста ссылок */
+    text-decoration: none; /* Убирает подчеркивание текста */
+    font-size: 1.1em; /* Увеличивает размер шрифта ссылок */
+    margin: 0 15px; /* Задает расстояние между ссылками */
+    transition: color 0.3s; /* Анимация изменения цвета при наведении */
 }
 
 .navbar a:hover {
-    color: #ffcc00;
+    color: #ffcc00; /* Изменяет цвет текста ссылок при наведении */
 }
 
 .dropdown {
-    position: absolute; /* Абсолютное позиционирование */
-    right: 20px; /* Отступ от правого края */
+    position: absolute; /* Абсолютное позиционирование блока */
+    right: 20px; /* Отступ блока от правого края родителя */
 }
 
 .dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #333; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта текста */
+    border: none; /* Убирает рамку */
+    cursor: pointer; /* Меняет курсор на указатель */
+    transition: background-color 0.3s, color 0.3s;/* Анимация изменения фона при наведении */
 }
 
 .dropbtn:hover {
-    background-color: #367;
+    background-color: #333; /* Оставляет фон таким же при наведении */
+    color: #ffcc00; /* Цвет текста при наведении на кнопку */
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    display: none; /* Прячет содержимое по умолчанию */
+    position: absolute; /* Абсолютное позиционирование внутри родителя */
+    right: 0; /* Прижимаем к правому краю родителя */
+    background-color: #f9f9f9; /* Цвет фона содержимого */
+    min-width: 160px; /* Минимальная ширина содержимого */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Добавляет тень к выпадающему блоку */
+    z-index: 1; /* Устанавливает порядок наложения */
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    color: black; /* Цвет текста ссылок */
+    padding: 12px 16px; /* Внутренние отступы */
+    text-decoration: none; /* Убирает подчеркивание текста */
+    display: block; /* Делает ссылку блочным элементом */
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Меняет цвет фона ссылки при наведении */
+    color: #ffcc00;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Показывает выпадающее меню при наведении на родителя */
 }
 
 .container {
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 100px; /* Отступ сверху */
+    text-align: center; /* Центрирует содержимое */
 }
 
 .content h1 {
-    font-size: 2.1em;
-    margin-bottom: 60px;
-    color: #f0f2f0;
+    font-size: 2.1em; /* Размер текста заголовка */
+    margin-bottom: 60px; /* Отступ снизу */
+    color: #f0f2f0; /* Цвет текста заголовка */
 }
 
 .content p {
-    font-size: 1.6em;
-    color: white;
+    font-size: 1.6em; /* Размер текста абзаца */
+    color: white; /* Цвет текста */
 }
 
 .manifest {
-    text-align: center;
-    max-width: 835px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.6;
-    color: white;
-
+    text-align: center; /* Центрирование текста */
+    max-width: 835px; /* Максимальная ширина блока */
+    margin: 0 auto; /* Выравнивание по центру страницы */
+    text-align: justify; /* Выравнивание текста по ширине */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: white; /* Цвет текста */
 }
 
-.manifest p{
-    position: relative; /* Устанавливает относительное позиционирование, чтобы использовать абсолютное позиционирование для псевдоэлемента */
-    text-align: center; /* Выравнивает текст заголовка по центру */
-    color: white; /* Устанавливает цвет текста заголовка (оранжевый) */
-    font-size: 1.2em; /* Устанавливает размер шрифта заголовка */
-    margin-top: 50px; /* Устанавливает отступ сверху для заголовка */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), /* Добавляет тень к тексту заголовка для лучшей видимости */
+.manifest p {
+    position: relative; /* Относительное позиционирование для вложенных элементов */
+    text-align: center; /* Центрирование текста */
+    color: white; /* Цвет текста */
+    font-size: 1.2em; /* Размер текста */
+    margin-top: 50px; /* Отступ сверху */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), /* Тени текста для лучшей читаемости */
                  -2px -2px 5px rgba(0, 0, 0, 0.5),
                  2px -2px 5px rgba(0, 0, 0, 0.5),
                  -2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Стиль для страницы DayZ */
+.server-container {
+    margin-top: 100px; /* Отступ сверху */
+    text-align: left; /* Текст выравнивается по левому краю */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
+    border-radius: 10px; /* Скругление углов */
+    width: 80%;
+    margin: 100px auto;
+}
+
+.server-container ul {
+    list-style-type: disc; /* Убирает стандартные маркеры списка */
+    list-style-position: inside;
+    padding: 0;
+
+}
+
+.server-container li {
+    font-size: 1.2em; /* Размер текста для списка */
+    color: white; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ снизу для каждого элемента */
+}
+
+.footer-container {
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 0; /* Приклеиваем к нижнему краю экрана */
+    left: 0; /* Приклеиваем к левому краю */
+    width: 100%; /* Занимает всю ширину */
+    background-color: #333; /* Цвет фона футера */
+    color: white; /* Цвет текста футера */
+    text-align: center; /* Центрируем текст */
+    padding: 10px 20px; /* Внутренние отступы */
+    display: flex; /* Используем флексбокс для выравнивания */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+
+}
+
+footer p {
+    margin: 0; /* Убираем отступы у абзаца */
+    font-size: 1.1em; /* Размер шрифта */
 }

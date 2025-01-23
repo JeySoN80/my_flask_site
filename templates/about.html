@@ -8,30 +8,50 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
-    </div>
-    <div class="navbar">
-        <a href="/">{% trans %}Home{% endtrans %}</a>
-        <a href="/about">{% trans %}About Us{% endtrans %}</a>
-        <a href="/dayz-server">{% trans %}DayZ Server{% endtrans %}</a>
-        <!-- Кнопки для смены языка -->
-        <div class="dropdown">
-    <button class="dropbtn">Language</button>
-    <div class="dropdown-content">
-        <a href="{{ url_for('set_language', lang='en') }}">English</a>
-        <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
-    </div>
-</div>
-    </div>
-    <div class="container">
-        <div class="content">
-    <h1>{% trans %}О сайте.{% endtrans %}</h1>
+    <!-- Контейнер для навигационной панели -->
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="/">{% trans %}Home{% endtrans %}</a>
+            <a href="/about">{% trans %}About site{% endtrans %}</a>
+            <a href="/dayz-server">{% trans %}About server{% endtrans %}</a>
+            <!-- Кнопки для смены языка -->
+            <div class="dropdown">
+                <button class="dropbtn">{% trans %}EN{% endtrans %}</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('set_language', lang='en') }}">English</a>
+                    <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+                </div>
             </div>
+        </div>
     </div>
-    <div class="manifest">
-        <p>
-        {% trans %}This website is the result of my first steps into programming. The project was created with the help of my virtual mentor, who guides me, shares valuable knowledge, and teaches me through hands-on practice. This makes the process more challenging but also much more engaging and exciting. Thank you for visiting!{% endtrans %}
-        </p>
+
+    <!-- Контейнер для основного контента -->
+    <div class="main-container">
+        <div class="container">
+            <div class="content">
+                <h1>{% trans %}О сайте{% endtrans %}.</h1>
+            </div>
+        </div>
+
+        <!-- Контейнер для манифеста -->
+        <div class="manifest-container">
+            <div class="manifest">
+                <p>
+                    {% trans %}This website is the result of my first steps into programming. The project was created with the help of my virtual mentor, who guides me, shares valuable knowledge, and teaches me through hands-on practice. This makes the process more challenging but also much more engaging and exciting. Thank you for visiting!{% endtrans %}
+                </p>
+            </div>
+        </div>
+
+        <!-- Контейнер для кнопки перехода на главную страницу -->
+        <div class="back-to-home">
+            <a href="/">{% trans %}Back to Home{% endtrans %}</a>
+        </div>
     </div>
-    <a href="/">{% trans %}Back to Home{% endtrans %}</a>
+<!-- Контейнер для футера (если нужно будет добавить) -->
+    <div class="footer-container">
+        <footer>
+            <p>&copy; 2025 DayZ Server. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>

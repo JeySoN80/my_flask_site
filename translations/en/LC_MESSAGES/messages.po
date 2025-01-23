@@ -30,6 +30,11 @@ msgstr "This website is the result of my first steps into programming. The proje
 msgid "О сервере"
 msgstr "About server"
 
+msgid "Информация о сервере"
+msgstr "Server information"
+
+Information about server
+
 msgid "Загляните на наш сервер и присоединяйтесь к веселью!"
 msgstr "Check out our server and join the fun!"
 

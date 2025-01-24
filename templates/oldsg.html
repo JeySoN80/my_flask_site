@@ -14,7 +14,10 @@
             <a href="/">{% trans %}Home{% endtrans %}</a>
             <a href="/about">{% trans %}About site{% endtrans %}</a>
             <a href="/dayz-server">{% trans %}About server{% endtrans %}</a>
-            <a href="/oldsg">{% trans %}OSG Channel{% endtrans %}</a>
+            <a href="/oldsg">{% trans %}YouTube{% endtrans %}</a>
+
+                         <!-- Кнопка гамбургера -->
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
 
             <!-- Кнопки для смены языка -->
             <div class="dropdown">
@@ -37,12 +40,16 @@
     </div>
     <div class="video-container">
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
+            <iframe src="https://www.youtube.com/embed/Vld3MkTVIK8"></iframe>
             <h3>Название Видео 1</h3>
         </div>
         <div class="video">
             <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
             <h3>Название Видео 2</h3>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
+            <h3>Название Видео 3</h3>
         </div>
         <div class="video">
             <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
@@ -56,7 +63,11 @@
             <p>&copy; 2025 JeySoN Server. All Rights Reserved.</p>
         </footer>
     </div>
-</body>
-</html>
+<script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>

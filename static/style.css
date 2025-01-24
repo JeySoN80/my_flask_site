@@ -242,11 +242,13 @@ header {
 
 .video {
     width: 300px;
-    background: white;
+    background: black;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
+    color: white;
+    font-size: 15px;
 }
 
 iframe {
@@ -257,5 +259,108 @@ iframe {
 
 h3 {
     margin: 10px 0;
+}
+
+/* Медиазапрос для экранов шириной 768px и меньше */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Размещает элементы меню вертикально */
+        align-items: flex-start; /* Выравнивание элементов по левому краю */
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        color: white;
+}
+
+.navbar a {
+        margin: 10px 0; /* Отступы между ссылками */
+}
+
+.dropdown-content {
+        position: static; /* Меняет позиционирование выпадающего меню */
+        box-shadow: none; /* Убирает тень */
+}
+
+    /* Стили для кнопки гамбургера */
+.menu-toggle {
+        display: block;
+        cursor: pointer;
+}
+
+.navbar a {
+        display: none; /* Скрывает обычные ссылки */
+}
+
+.navbar.open a {
+        display: block; /* Показывает ссылки, если меню открыто */
+}
+
+    /* Для скрытого меню */
+.navbar.open .menu {
+        display: block;
+}
+
+/* Мобильная версия меню */
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+}
+
+/* Стиль кнопки гамбургера */
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute; /* Абсолютное позиционирование блока */
+    right: 20px; /* Отступ блока от правого края родителя */
+}
+
+.dropbtn {
+    background-color: #333; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта текста */
+    border: none; /* Убирает рамку */
+    cursor: pointer; /* Меняет курсор на указатель */
+    transition: background-color 0.3s, color 0.3s;/* Анимация изменения фона при наведении */
+}
+
+.dropbtn:hover {
+    background-color: #333; /* Оставляет фон таким же при наведении */
+    color: #ffcc00; /* Цвет текста при наведении на кнопку */
+}
+
+.dropdown-content {
+    display: none; /* Прячет содержимое по умолчанию */
+    position: absolute; /* Абсолютное позиционирование внутри родителя */
+    right: 0; /* Прижимаем к правому краю родителя */
+    background-color: #f9f9f9; /* Цвет фона содержимого */
+    min-width: 160px; /* Минимальная ширина содержимого */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Добавляет тень к выпадающему блоку */
+    z-index: 1; /* Устанавливает порядок наложения */
+}
+
+.dropdown-content a {
+    color: black; /* Цвет текста ссылок */
+    padding: 12px 16px; /* Внутренние отступы */
+    text-decoration: none; /* Убирает подчеркивание текста */
+    display: block; /* Делает ссылку блочным элементом */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Меняет цвет фона ссылки при наведении */
+    color: #ffcc00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показывает выпадающее меню при наведении на родителя */
+}
 }
 

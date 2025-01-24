@@ -168,3 +168,49 @@ footer p {
     margin: 0; /* Убираем отступы у абзаца */
     font-size: 1.1em; /* Размер шрифта */
 }
+
+    /* Стиль таблицы */
+table {
+    width: 300px; /* Фиксированная ширина */
+    max-width: 400px; /* Не разрешаем таблице расширяться больше 300px */
+    margin: 20px auto; /* Центрируем таблицу */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тень для красоты */
+    background-color: #2e2e2e; /* Цвет фона */
+}
+
+
+td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+td:first-child {
+    font-weight: bold;
+    background-color: #3b3b3b;
+}
+
+tr:nth-child(even) td {
+    background-color: #353578;
+}
+
+tr:hover td {
+    background-color: #291111;
+}
+
+/* Изменение цвета фона всей строки при наведении */
+table tr:hover {
+    background-color: #444444; /* Цвет при наведении */
+    transition: background-color 0.3s; /* Плавное изменение */
+}
+
+/* Цвет для двух верхних ячеек */
+table tr:first-child td {
+    background-color: #333333; /* Цвет верхних ячеек */
+}
+
+/* Цвет для остальных ячеек (внизу) */
+table tr:not(:first-child) td {
+    background-color: #2e2e2e; /* Цвет остальных ячеек */
+}
+

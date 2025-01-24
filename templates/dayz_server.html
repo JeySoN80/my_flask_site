@@ -6,6 +6,27 @@
     <title>About server</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+        td {
+            padding: 10px 15px;
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }
+        td:first-child {
+            font-weight: bold;
+        }
+        tr:nth-child(even) td {
+            background-color: #3b3b3b;
+        }
+    </style>
 </head>
 <body>
     <!-- Контейнер для навигационной панели -->
@@ -31,19 +52,26 @@
                 <h1>{% trans %}Server information{% endtrans %}:</h1>
                 <p>{% trans %}Check out our server and join the fun!{% endtrans %}</p>
 
-                <ul>
-                    <li><strong>IP Address:</strong> 192.168.1.1</li>
-                    <li><strong>Current Player Count:</strong> 25/50</li>
-                </ul>
+                <table>
+                    <tr>
+                        <td>{% trans %}IP Address{% endtrans %}</td>
+                        <td>192.168.1.1</td>
+                    </tr>
+                    <tr>
+                        <td>{% trans %}Current Player Count{% endtrans %}</td>
+                        <td>25/50</td>
+                    </tr>
+                </table>
 
                 <a href="/">{% trans %}Back to Home{% endtrans %}</a>
             </div>
         </div>
     </div>
-<!-- Контейнер для футера (если нужно будет добавить) -->
+
+    <!-- Контейнер для футера (если нужно будет добавить) -->
     <div class="footer-container">
         <footer>
-            <p>&copy; 2025 DayZ Server. All Rights Reserved.</p>
+            <p>&copy; 2025 JeySoM Server. All Rights Reserved.</p>
         </footer>
     </div>
 </body>

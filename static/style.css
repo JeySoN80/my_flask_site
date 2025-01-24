@@ -3,7 +3,7 @@ html, body {
     margin: 0; /* Убирает внешние отступы у html и body */
     padding: 0; /* Убирает внутренние отступы у html и body */
     font-family: Arial, sans-serif; /* Устанавливает шрифт Arial или ближайший доступный sans-serif */
-    background-color: #f4f4f4; /* Устанавливает фоновый цвет */
+    background-color: #140000; /* Устанавливает фоновый цвет */
     background-image: url('/static/back.jpg'); /* Устанавливает фоновое изображение */
     background-size: cover; /* Растягивает фон на весь экран, сохраняя пропорции */
     background-position: center; /* Центрирует фоновое изображение */

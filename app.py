@@ -24,6 +24,9 @@ def about():
 @app.route("/dayz-server")
 def dayz_server():
     return render_template("dayz_server.html", get_locale=get_locale)  # Страница сервера DayZ
+@app.route("/oldsg")
+def oldsg():
+    return render_template("oldsg.html", get_locale=get_locale)     # Страница канала
 
 @app.route('/set_language/<lang>')
 def set_language(lang):

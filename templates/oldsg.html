@@ -1,10 +1,10 @@
+<!-- Страничка полностью написана ручками.-->
 <!DOCTYPE html>
-<html lang="{{ get_locale() }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DayZSERVER</title>
-    <!-- Подключение внешнего CSS файла -->
+    <title>OSG Channel</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -26,26 +26,37 @@
             </div>
         </div>
     </div>
-
-    <!-- Основной контейнер для контента -->
     <div class="main-container">
         <div class="container">
             <div class="content">
-                <h1>
-                    {% trans %}Welcome to DayZ Server!{% endtrans %}
-                </h1>
-                <p>
-                    {% trans %}Site Version{% endtrans %} 1.08
-                </p>
-            </div>
+    <header>
+        <h1>OLD School GameZ Channel</h1>
+    </header>
+                </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
+            <h3>Название Видео 1</h3>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
+            <h3>Название Видео 2</h3>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/ID_ВИДЕО"></iframe>
+            <h3>Название Видео 3</h3>
         </div>
     </div>
 
-    <!-- Контейнер для футера (если нужно будет добавить) -->
+<!-- Контейнер для футера (если нужно будет добавить) -->
     <div class="footer-container">
         <footer>
             <p>&copy; 2025 JeySoN Server. All Rights Reserved.</p>
         </footer>
     </div>
+</body>
+</html>
 </body>
 </html>

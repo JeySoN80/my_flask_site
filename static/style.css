@@ -51,7 +51,7 @@ html, body {
     background-color: #333; /* Цвет фона кнопки */
     color: white; /* Цвет текста кнопки */
     padding: 10px; /* Внутренние отступы */
-    font-size: 16px; /* Размер шрифта текста */
+
     border: none; /* Убирает рамку */
     cursor: pointer; /* Меняет курсор на указатель */
     transition: background-color 0.3s, color 0.3s;/* Анимация изменения фона при наведении */

@@ -6,6 +6,7 @@
     <title>DayZSERVER</title>
     <!-- Подключение внешнего CSS файла -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
     <!-- Контейнер для навигационной панели -->
@@ -39,7 +40,7 @@
                     {% trans %}Welcome to DayZ Server!{% endtrans %}
                 </h1>
                 <p>
-                    {% trans %}Site Version{% endtrans %} 1.09
+                    {% trans %}Site Version{% endtrans %} 1.09.1
                 </p>
             </div>
         </div>

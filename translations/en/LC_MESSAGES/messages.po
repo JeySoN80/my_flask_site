@@ -43,3 +43,9 @@ msgstr "Server Info:"
 
 msgid "RU"
 msgstr "EN"
+
+msgid "Статуса сервера"
+msgstr "Server status"
+
+msgid "Игроки онлайн"
+msgstr "Players online"

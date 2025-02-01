@@ -49,3 +49,6 @@ msgstr "Server status"
 
 msgid "Игроки онлайн"
 msgstr "Players online"
+
+msgid "Меню"
+msgstr "Menu"

@@ -4,59 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DayZSERVER</title>
-    <!-- Подключение внешнего CSS файла -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
-    <!-- Контейнер для навигационной панели -->
+
     <div class="navbar-container">
         <div class="navbar">
-            <a href="/">{% trans %}Home{% endtrans %}</a>
-            <a href="/about">{% trans %}About site{% endtrans %}</a>
-            <a href="/dayz-server">{% trans %}About server{% endtrans %}</a>
-            <a href="/oldsg">{% trans %}YouTube{% endtrans %}</a>
+            <!-- Основное навигационное меню -->
+            <div class="menu">
+                <div class="main-menu">
+                    <button class="dropbtn">{% trans %}Menu{% endtrans %}</button>
+                    <div class="main-dropdown-content">
+                        <a href="/">{% trans %}Home{% endtrans %}</a>
+                        <a href="/about">{% trans %}About site{% endtrans %}</a>
+                        <a href="/dayz-server">{% trans %}About server{% endtrans %}</a>
+                        <a href="/oldsg">{% trans %}YouTube{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
 
-             <!-- Кнопка гамбургера -->
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-
-
-            <!-- Кнопки для смены языка -->
-            <div class="dropdown">
-                <button class="dropbtn">{% trans %}EN{% endtrans %}</button>
-                <div class="dropdown-content">
-                    <a href="{{ url_for('set_language', lang='en') }}">English</a>
-                    <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+            <!-- Языковое меню -->
+            <div class="language-menu">
+                <div class="language-dropdown">
+                    <button class="dropbtn">{% trans %}EN{% endtrans %}</button>
+                    <div class="language-dropdown-content">
+                        <a href="{{ url_for('set_language', lang='en') }}">English</a>
+                        <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Основной контейнер для контента -->
     <div class="main-container">
         <div class="container">
             <div class="content">
-                <h1>
-                    {% trans %}Welcome to DayZ Server!{% endtrans %}
-                </h1>
-                <p>
-                    {% trans %}Site Version{% endtrans %} 1.09.2
-                </p>
+                <h1>{% trans %}Welcome to DayZ Server!{% endtrans %}</h1>
+                <p>{% trans %}Site Version{% endtrans %} 1.09.3</p>
             </div>
         </div>
     </div>
-
-    <!-- Контейнер для футера (если нужно будет добавить) -->
     <div class="footer-container">
         <footer>
             <p>&copy; 2025 JeySoN Server. All Rights Reserved.</p>
         </footer>
     </div>
-<script>
-        function toggleMenu() {
-            var navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('open');
-        }
+    <script>
+    function toggleHamburgerMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    }
     </script>
 </body>
 </html>

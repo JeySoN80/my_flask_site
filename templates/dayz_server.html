@@ -29,23 +29,29 @@
     </style>
 </head>
 <body>
-    <!-- Контейнер для навигационной панели -->
     <div class="navbar-container">
         <div class="navbar">
-            <a href="/">{% trans %}Home{% endtrans %}</a>
-            <a href="/about">{% trans %}About site{% endtrans %}</a>
-            <a href="/dayz-server">{% trans %}About server{% endtrans %}</a>
-            <a href="/oldsg">{% trans %}YouTube{% endtrans %}</a>
+            <!-- Основное навигационное меню -->
+            <div class="menu">
+                <div class="main-menu">
+                    <button class="dropbtn">{% trans %}Menu{% endtrans %}</button>
+                    <div class="main-dropdown-content">
+                        <a href="/">{% trans %}Home{% endtrans %}</a>
+                        <a href="/about">{% trans %}About site{% endtrans %}</a>
+                        <a href="/dayz-server">{% trans %}About server{% endtrans %}</a>
+                        <a href="/oldsg">{% trans %}YouTube{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Кнопка гамбургера -->
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-
-            <!-- Кнопки для смены языка -->
-            <div class="dropdown">
-                <button class="dropbtn">{% trans %}EN{% endtrans %}</button>
-                <div class="dropdown-content">
-                    <a href="{{ url_for('set_language', lang='en') }}">English</a>
-                    <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+            <!-- Языковое меню -->
+            <div class="language-menu">
+                <div class="language-dropdown">
+                    <button class="dropbtn">{% trans %}EN{% endtrans %}</button>
+                    <div class="language-dropdown-content">
+                        <a href="{{ url_for('set_language', lang='en') }}">English</a>
+                        <a href="{{ url_for('set_language', lang='ru') }}">Русский</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +75,7 @@
                     </tr>
                     <tr>
                         <td>{% trans %}Server status{% endtrans %}:</td>
-                        <td>Ofline</td>
+                        <td>Offline</td>
                     </tr>
                 </table>
 

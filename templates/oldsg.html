@@ -9,6 +9,7 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
+
     <div class="navbar-container">
         <div class="navbar">
             <!-- Основное навигационное меню -->
@@ -39,9 +40,14 @@
     <div class="main-container">
         <div class="container">
             <div class="content">
+                <div class="logo-container">
     <header>
-        <h1>OLD School GameZ Channel</h1>
+    <video autoplay loop muted playsinline width="300">
+        <source src="{{ url_for('static', filename='videos/osg.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     </header>
+                </div>
             </div>
         </div>
     </div>
@@ -70,11 +76,11 @@
             <p>&copy; 2025 JeySoN Server. All Rights Reserved.</p>
         </footer>
     </div>
-<script>
-        function toggleMenu() {
-            var navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('open');
-        }
+    <script>
+    function toggleHamburgerMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    }
     </script>
 </body>
 </html>

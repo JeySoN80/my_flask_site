@@ -173,24 +173,50 @@ table tr:first-child td {
 table tr:not(:first-child) td {
     background-color: #2e2e2e; /* Цвет остальных ячеек */
 }
+/* Сброс стандартных отступов и установка корректного box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Стили для Футера */
 .footer-container {
     position: fixed; /* Фиксированное позиционирование */
     bottom: 0; /* Приклеиваем к нижнему краю экрана */
     left: 0; /* Приклеиваем к левому краю */
-    width: 100%; /* Занимает всю ширину */
+    width: 100%; /* Занимает всю ширину экрана */
     background-color: #333; /* Цвет фона футера */
     color: white; /* Цвет текста футера */
     text-align: center; /* Центрируем текст */
     padding: 10px 20px; /* Внутренние отступы */
-    display: flex; /* Используем флексбокс для выравнивания */
+    display: flex; /* Используем flexbox для центрирования */
     justify-content: center; /* Центрируем содержимое по горизонтали */
     align-items: center; /* Центрируем содержимое по вертикали */
-
 }
 
-footer p {
-    margin: 0; /* Убираем отступы у абзаца */
+/* Стили для текста внутри футера */
+.footer-container p {
     font-size: 1.1em; /* Размер шрифта */
+    margin: 0; /* Убираем стандартные отступы */
 }
+
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Центрирование видео */
+    margin-bottom: 20px; /* Добавляет отступ снизу */
+}
+
+.video-container {
+    padding-bottom: 60px; /* Отступ снизу */
+}
+
+
+video {
+    display: block;
+    margin: 0 auto;  /* Центрирование */
+    max-width: 100%; /* Чтобы не выходило за границы */
+}
+
 

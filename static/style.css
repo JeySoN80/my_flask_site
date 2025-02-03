@@ -180,6 +180,14 @@ table tr:not(:first-child) td {
     box-sizing: border-box;
 }
 
+.manifest {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
 /* Стили для Футера */
 .footer-container {
     position: fixed; /* Фиксированное позиционирование */
